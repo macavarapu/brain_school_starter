@@ -1,4 +1,16 @@
+
+
+import 'package:brain_school_starter/view/assignment_screen/assignment_screen.dart';
+import 'package:brain_school_starter/view/datesheet_screen/datesheet_screen.dart';
+import 'package:brain_school_starter/view/fee_screen/fee_screen.dart';
+import 'package:brain_school_starter/view/home_screen/home_screen.dart';
+import 'package:brain_school_starter/view/login_screen/login_screen.dart';
+import 'package:brain_school_starter/view/my_profile/my_profile.dart';
+import 'package:brain_school_starter/view/result_screen/result_screen.dart';
+import 'package:brain_school_starter/view/splash__screen/splash_screen.dart';
 import 'package:flutter/material.dart';
+
+// import 'constants/go_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,8 +35,23 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+
+     //  routerConfig: routes ,
+
+      initialRoute:     "/splash",
+      routes: {
+        "/splash":(context) => Splashscreen(),
+        "/login":(context) => Loginscreen(),
+        "/home":(context) => Homescreen(),
+        "/myprofile":(context) => Myprofile(),
+        "/feesscreen":(context) => Feesscreen(),
+        "/assignment":(context) => Assignmentscreen(),
+        "/datesheet":(context) => Datesheetscreen(),
+        "/result":(context) => Resultscreen(),
+      },
+    //  home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
